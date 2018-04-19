@@ -34,7 +34,14 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+
+  'get  /admin/get-all-users': 'UserController.getAllUsers',
+  'get  /admin/get-user/:id': 'UserController.getUserById',
+  'POST /admin/save-user': 'UserController.saveUserInfo',
+  'POST /admin/update-user/:id': 'UserController.updateUserInfo',
+  'POST /admin/delete-user/:id': 'UserController.deleteUserInfo',
+
 
   /***************************************************************************
   *                                                                          *
